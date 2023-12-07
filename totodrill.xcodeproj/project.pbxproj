@@ -14,6 +14,9 @@
 		A58247BD2B1DE85B008AC68E /* totodrillTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58247BC2B1DE85B008AC68E /* totodrillTests.swift */; };
 		A58247C72B1DE85B008AC68E /* totodrillUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58247C62B1DE85B008AC68E /* totodrillUITests.swift */; };
 		A58247C92B1DE85B008AC68E /* totodrillUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58247C82B1DE85B008AC68E /* totodrillUITestsLaunchTests.swift */; };
+		A58247D72B1DE87E008AC68E /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58247D62B1DE87E008AC68E /* SpeechRecognizer.swift */; };
+		A58247DA2B1DEA16008AC68E /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58247D92B1DEA16008AC68E /* Logging.swift */; };
+		A58247DC2B1DEB40008AC68E /* customlm in Resources */ = {isa = PBXBuildFile; fileRef = A58247DB2B1DEB40008AC68E /* customlm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		A58247C22B1DE85B008AC68E /* totodrillUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = totodrillUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58247C62B1DE85B008AC68E /* totodrillUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = totodrillUITests.swift; sourceTree = "<group>"; };
 		A58247C82B1DE85B008AC68E /* totodrillUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = totodrillUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A58247D62B1DE87E008AC68E /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		A58247D92B1DEA16008AC68E /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		A58247DB2B1DEB40008AC68E /* customlm */ = {isa = PBXFileReference; lastKnownFileType = folder; path = customlm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,9 @@
 		A58247AA2B1DE859008AC68E /* totodrill */ = {
 			isa = PBXGroup;
 			children = (
+				A58247DB2B1DEB40008AC68E /* customlm */,
+				A58247D82B1DEA07008AC68E /* Miscellaneous */,
+				A58247D52B1DE868008AC68E /* Model */,
 				A58247AB2B1DE859008AC68E /* totodrillApp.swift */,
 				A58247AD2B1DE859008AC68E /* ContentView.swift */,
 				A58247AF2B1DE85B008AC68E /* Assets.xcassets */,
@@ -125,6 +134,22 @@
 				A58247C82B1DE85B008AC68E /* totodrillUITestsLaunchTests.swift */,
 			);
 			path = totodrillUITests;
+			sourceTree = "<group>";
+		};
+		A58247D52B1DE868008AC68E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A58247D62B1DE87E008AC68E /* SpeechRecognizer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A58247D82B1DEA07008AC68E /* Miscellaneous */ = {
+			isa = PBXGroup;
+			children = (
+				A58247D92B1DEA16008AC68E /* Logging.swift */,
+			);
+			path = Miscellaneous;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +258,7 @@
 			files = (
 				A58247B32B1DE85B008AC68E /* Preview Assets.xcassets in Resources */,
 				A58247B02B1DE85B008AC68E /* Assets.xcassets in Resources */,
+				A58247DC2B1DEB40008AC68E /* customlm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +285,8 @@
 			files = (
 				A58247AE2B1DE859008AC68E /* ContentView.swift in Sources */,
 				A58247AC2B1DE859008AC68E /* totodrillApp.swift in Sources */,
+				A58247D72B1DE87E008AC68E /* SpeechRecognizer.swift in Sources */,
+				A58247DA2B1DEA16008AC68E /* Logging.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +453,8 @@
 				DEVELOPMENT_TEAM = 7YBRUG6EVL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app uses the microphone to perform speech recognition";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "This app uses speech recognition to listen to the drill answers";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -454,6 +484,8 @@
 				DEVELOPMENT_TEAM = 7YBRUG6EVL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app uses the microphone to perform speech recognition";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "This app uses speech recognition to listen to the drill answers";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct totodrillApp: App {
+    @State private var speechRecognizer = SpeechRecognizer()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(speechRecognizer)
         }
     }
 }
